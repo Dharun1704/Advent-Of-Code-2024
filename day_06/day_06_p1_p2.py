@@ -57,8 +57,8 @@ _, visited = find_path(start, '^')
 print(len(visited)) # part 1 solution
 
 result = 0
-obstacle_candidates = visited - {start}
-for obstacle in obstacle_candidates:
-    if find_path(start, '^', obstacle)[0]:
+obstacles = visited - {start}
+for obs in obstacles:
+    if find_path(start, '^', obs)[0]:
         result += 1
 print(result) # part 2 solution
